@@ -9,7 +9,8 @@ module.exports = () => {
 
   let comments = {};
 
-  submissions.forEach(entry => {
+  for(var i = 0; i < submissions.length; i++) {
+    let entry = submissions[i];
     let comment = {
       name: entry.data.name,
       avatar: gravatar.url(entry.data.email, {s: '100', r: 'x', d: 'retro'}, true),
@@ -23,8 +24,7 @@ module.exports = () => {
     } else {
       comments[entry.data.path] = [comment];
     }
-
-  });
+  }
 
   return comments;
 
