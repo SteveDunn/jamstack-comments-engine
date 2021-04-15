@@ -5,12 +5,12 @@ var request = require("request");
 // populate environment variables locally.
 require('dotenv').config()
 
-const URL = "https://jamstack-comments.netlify.com";
+const URL = "https://stoic-northcutt-a31663.netlify.app";
 
 /*
   Our serverless function handler
 */
-export function handler(event, context, callback) {
+exports.handler = function(event, context, callback) {
 
   // get the arguments from the notification
   var body = JSON.parse(event.body);
