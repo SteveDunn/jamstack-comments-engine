@@ -5,7 +5,7 @@ var request = require("request");
 // populate environment variables locally.
 require('dotenv').config()
 
-const URL = "https://stoic-northcutt-a31663.netlify.app";
+const URL = "https://stoic-northcutt-a31663.netlify.app/";
 
 /*
   Our serverless function handler
